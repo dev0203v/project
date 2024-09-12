@@ -1,0 +1,47 @@
+﻿<Page x:Class="Kia.graph"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Kia"
+      xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="725" d:DataContext="{d:DesignInstance local:graph}">
+
+    <Grid Background="White">
+        <lvc:CartesianChart x:Name="cartesianChart" Margin="0,242,10,49">
+            <lvc:CartesianChart.Series>
+                <lvc:LineSeries Title="oWAR" Values="{Binding oWARValues}" PointGeometrySize="5"/>
+                <lvc:LineSeries Title="dWAR" Values="{Binding dWARValues}" PointGeometrySize="5"/>
+                <lvc:LineSeries Title="WAR" Values="{Binding WARValues}" PointGeometrySize="5"/>
+                <lvc:LineSeries Title="AVG" Values="{Binding AVGValues}" PointGeometrySize="5"/>
+                <lvc:LineSeries Title="OBP" Values="{Binding OBPValues}" PointGeometrySize="5"/>
+                <lvc:LineSeries Title="SLG" Values="{Binding SLGValues}" PointGeometrySize="5"/>
+                <lvc:LineSeries Title="OPS" Values="{Binding OPSValues}" PointGeometrySize="5"/>
+                <lvc:LineSeries Title="RePA" Values="{Binding RePAValues}" PointGeometrySize="5"/>
+                <lvc:LineSeries Title="WRC" Values="{Binding WRCValues}" PointGeometrySize="5"/>
+            </lvc:CartesianChart.Series>
+        </lvc:CartesianChart>
+        <Button x:Name="main" Content="뒤로가기" HorizontalAlignment="Left" Height="56" Margin="39,159,0,0" VerticalAlignment="Top" Width="101" Click="main_Click" BorderBrush="{x:Null}" Foreground="White" FontSize="14" FontWeight="Bold">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="19"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <SolidColorBrush Color="#FF05141F"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="send" Content="조회" HorizontalAlignment="Left" Height="55" Margin="585,159,0,0" VerticalAlignment="Top" Width="101" Click="send_Click" BorderBrush="{x:Null}" Foreground="White" FontSize="14" FontWeight="Bold">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="19"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <SolidColorBrush Color="#FF05141F"/>
+            </Button.Background>
+        </Button>
+        <Label Content="그래프" HorizontalAlignment="Center" Height="98" VerticalAlignment="Top" Width="725" Background="#FFEA0029" FontSize="30" VerticalContentAlignment="Center" Padding="30,5,5,5" UseLayoutRounding="True" Foreground="White" FontWeight="Bold"/>
+    </Grid>
+</Page>
