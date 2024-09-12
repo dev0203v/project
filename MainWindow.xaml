@@ -1,12 +1,16 @@
-﻿<Window x:Class="Kia.MainWindow"
+﻿<Window x:Class="Salmon.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Kia"
+        xmlns:local="clr-namespace:Salmon"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="725">
+        Title="MainWindow" Height="600" Width="1050" Background="#FFFF9800">
     <Grid>
-        <Frame Source="/Main.xaml" NavigationUIVisibility="Hidden"/>
+
+        <StackPanel>
+            <Frame Source="/home.xaml" NavigationUIVisibility="Hidden"/>
+        </StackPanel>
+        
     </Grid>
 </Window>
